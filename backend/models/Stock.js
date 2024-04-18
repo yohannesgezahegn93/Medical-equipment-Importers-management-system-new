@@ -23,14 +23,6 @@ const Stock = sequelize.define('Stock', {
     allowNull: true,
     unique: true
   },
-  manufacturer: {
-    type: DataTypes.STRING,
-    allowNull: true
-  },
-  countryOfOrigin: {
-    type: DataTypes.STRING,
-    allowNull: true
-  },
   description: {
     type: DataTypes.STRING,
     allowNull: true

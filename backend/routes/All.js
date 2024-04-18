@@ -10,7 +10,6 @@ const { QueryTypes } = require('sequelize');
 
 const Sales = require('../models/Sales');
 const Stock = require('../models/Stock');
-const Buyers = require('../models/Buyers');
 const Suppliers = require('../models/Suppliers'); // Import the Suppliers model
 const Payments = require('../models/Payments'); // Import the Payments model
 const Customers = require('../models/Customers'); // Import the Customers model
@@ -42,27 +41,6 @@ router.get('/stock', async (req, res) => {
  
 
 // GET all buyers
-router.get('/buyers', async (req, res) => {
-    try {
-        const buyers = await Buyers.findAll();
-        res.json(buyers);
-    } catch (error) {
-        console.error('Error fetching buyers:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
-    }
-});
-
-// Add a new buyer
-router.post('/buyers', async (req, res) => {
-    const newBuyer = req.body;
-    try {
-        const createdBuyer = await Buyers.create(newBuyer);
-        res.status(201).json(createdBuyer);
-    } catch (error) {
-        console.error('Error adding buyer:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
-    }
-});
 
 
 // Route to fetch all suppliers

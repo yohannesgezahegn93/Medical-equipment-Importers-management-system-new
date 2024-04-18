@@ -1,5 +1,5 @@
 // models/Buyers.js
-const { DataTypes } = require('sequelize');
+/*const { DataTypes } = require('sequelize');
 const sequelize = require('../db');
 
 const Buyers = sequelize.define('Buyers', {
@@ -35,3 +35,4 @@ const Buyers = sequelize.define('Buyers', {
 });
 
 module.exports = Buyers;
+*/

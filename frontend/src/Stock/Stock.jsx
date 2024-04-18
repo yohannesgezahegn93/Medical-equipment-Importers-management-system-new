@@ -14,8 +14,6 @@ const Stock = () => {
       item_name: '',
       model: '',
       serialNumber: '',
-      manufacturer: '',
-      countryOfOrigin: '',
       description: '',
       quantity_available: '',
       unit_cost: '',
@@ -91,7 +89,7 @@ const Stock = () => {
     // Perform form validation here
     // Return true if form is valid, false otherwise
     // Example: Check if required fields are filled
-    if (!formData.item_name || !formData.model || !formData.expiry_date) {
+    if (!formData.item_name || !formData.model || !formData.purchased_date) {
         alert('Please fill in all required fields.');
         return false;
     }
@@ -118,8 +116,6 @@ const Stock = () => {
             item_name: '',
             model: '',
             serialNumber: '',
-            manufacturer: '',
-            countryOfOrigin: '',
             description: '',
             quantity_available: '',
             unit_cost: '',
@@ -184,13 +180,11 @@ return (
                     <th className="stock-thead">Item Name</th>
                     <th className="stock-thead">Model</th>
                     <th className="stock-thead">Serial Number</th>
-                    <th className="stock-thead">Manufacturer</th>
-                    <th className="stock-thead">Country of Origin</th>
                     <th className="stock-thead">Description</th>
                     <th className="stock-thead">Quantity Available</th>
-                    <th className="stock-thead">Unit Price</th>
+                    <th className="stock-thead">Unit Cost</th>
                     <th className="stock-thead">Buy Threshold Quantity</th>
-                    <th className="stock-thead">Expiry Date</th>
+                    <th className="stock-thead">Purchased Date</th>
                     <th className="stock-thead">Supplier ID</th>
                     <th className="stock-thead">Avg. Selling Price</th> {/* New column for average selling price */}
                     <th className="stock-thead">Avg. Time on Market</th> {/* New column for average time on market */}
@@ -204,13 +198,12 @@ return (
                         <td className="stock-table-fields">{stock.item_name}</td>
                         <td className="stock-table-fields">{stock.model}</td>
                         <td className="stock-table-fields">{stock.serialNumber}</td>
-                        <td className="stock-table-fields">{stock.manufacturer}</td>
-                        <td className="stock-table-fields">{stock.countryOfOrigin}</td>
+                      
                         <td className="stock-table-fields">{stock.description}</td>
                         <td className="stock-table-fields">{stock.quantity_available}</td>
-                        <td className="stock-table-fields">{stock.unit_price}</td>
+                        <td className="stock-table-fields">{stock.unit_cost}</td>
                         <td className="stock-table-fields">{stock.buy_threshold_quantity}</td>
-                        <td className="stock-table-fields">{new Date(stock.expiry_date).toLocaleString('en-US', {
+                        <td className="stock-table-fields">{new Date(stock.purchased_date).toLocaleString('en-US', {
                             year: 'numeric',
                             month: '2-digit',
                             day: '2-digit',
@@ -263,26 +256,7 @@ return (
                               className="stock-form-input"
                             />
                           </label>
-                          <label className="stock-form-label">
-                            Manufacturer:
-                            <input
-                              type="text"
-                              name="manufacturer"
-                              value={formData.manufacturer}
-                              onChange={handleChange}
-                              className="stock-form-input"
-                            />
-                          </label>
-                          <label className="stock-form-label">
-                            Country of Origin:
-                            <input
-                              type="text"
-                              name="countryOfOrigin"
-                              value={formData.countryOfOrigin}
-                              onChange={handleChange}
-                              className="stock-form-input"
-                            />
-                          </label>
+                        
                           <label className="stock-form-label">
                             Description:
                             <textarea

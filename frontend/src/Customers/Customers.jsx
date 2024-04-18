@@ -37,9 +37,13 @@ const Customer = () => {
     };
 
     const handleChange = (e) => {
-      const { name, value } = e.target;
-      setFormData({ ...formData, [name]: value });
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
     };
+    
 
     const validateForm = () => {
       if (!formData.customer_name || !formData.customer_address || !formData.contact_number || !formData.email || !formData.registration_date) {
@@ -148,10 +152,12 @@ const Customer = () => {
                                     onChange={handleChange}
                                     className="customer-form-input"
                                 >
+                                    <option value="">Select a customer type</option>
                                     <option value="Wholesaler">Wholesaler</option>
                                     <option value="End User">End User</option>
                                 </select>
                             </label>
+
 
                             <label className="customer-form-label">
                                 Customer Address:
