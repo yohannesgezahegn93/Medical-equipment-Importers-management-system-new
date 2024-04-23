@@ -22,6 +22,7 @@ const AnalyticalData = () => {
     const findTopSoldItems = async (year) => {
         try {
             const response = await axios.get(`http://localhost:7001/api/top-sold-items?year=${year}`);
+            console.log("topsolditems",response.data)
             setTopSoldItems(response.data);
         } catch (error) {
             console.error('Error fetching top sold items:', error);
@@ -88,14 +89,14 @@ const AnalyticalData = () => {
                     <thead>
                         <tr>
                             <th>Item Name</th>
-                            <th>Total Sales</th>
+                            <th>Total Quantity Sold</th>
                         </tr>
                     </thead>
                     <tbody>
                         {topSoldItems.map(item => (
                             <tr key={item.item_id}>
                                 <td>{item.item_name}</td>
-                                <td>{item.total_sales}</td>
+                                <td>{item.total_quantity_sold}</td>
                             </tr>
                         ))}
                     </tbody>
@@ -116,14 +117,14 @@ const AnalyticalData = () => {
                     <thead>
                         <tr>
                             <th>Item Name</th>
-                            <th>Total Sales</th>
+                            <th>Total Quantity sold</th>
                         </tr>
                     </thead>
                     <tbody>
                         {leastSoldItems.map(item => (
                             <tr key={item.item_id}>
                                 <td>{item.item_name}</td>
-                                <td>{item.total_sales}</td>
+                                <td>{item.total_quantity_sold}</td>
                             </tr>
                         ))}
                     </tbody>

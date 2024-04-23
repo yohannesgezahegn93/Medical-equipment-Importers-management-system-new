@@ -92,6 +92,7 @@ const Supplier = () => {
             <table className="main-supplier-table">
                 <thead >
                     <tr >
+                        <th className="supplier-thead">Supplier ID</th>
                         <th className="supplier-thead">Supplier Name</th>
                         <th className="supplier-thead">Supplier Address</th>
                         <th className="supplier-thead">Contact Number</th>
@@ -102,6 +103,7 @@ const Supplier = () => {
                 <tbody>
                     {supplierList.map((supplier) => (
                         <tr key={supplier.supplier_id}>
+                            <td className="supplier-table-fields">{supplier.supplier_id}</td>
                             <td className="supplier-table-fields">{supplier.supplier_name}</td>
                             <td className="supplier-table-fields">{supplier.supplier_address}</td>
                             <td className="supplier-table-fields">{supplier.contact_number}</td>

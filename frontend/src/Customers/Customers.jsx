@@ -154,7 +154,7 @@ const Customer = () => {
                                 >
                                     <option value="">Select a customer type</option>
                                     <option value="Wholesaler">Wholesaler</option>
-                                    <option value="End User">End User</option>
+                                    <option value="End user">End User</option>
                                 </select>
                             </label>
 

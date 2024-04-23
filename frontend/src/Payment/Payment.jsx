@@ -2,10 +2,12 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import './Payment.css';
 import { IoSearchSharp } from "react-icons/io5";
+import Select from 'react-select';
 
 const Payment = () => {
     const [paymentList, setPaymentList] = useState([]);
     const [showPaymentForm, setShowPaymentForm] = useState(false);
+    const [customerOptions, setCustomerOptions] = useState([]);
     const [formData, setFormData] = useState({
       amount: '',
       payment_date: '',
@@ -15,6 +17,7 @@ const Payment = () => {
 
     useEffect(() => {
         fetchPayments();
+        fetchCustomerOptions();
     }, []);
 
     const fetchPayments = async () => {
@@ -23,6 +26,18 @@ const Payment = () => {
             setPaymentList(response.data);
         } catch (error) {
             console.error('Error fetching payments:', error);
+        }
+    };
+    const fetchCustomerOptions = async () => {
+        try {
+            const response = await axios.get('http://localhost:7001/api/customers');
+            const options = response.data.map(customer => ({
+                value: customer.customer_id,
+                label: `${customer.customer_name} - ${customer.customer_id}` // Display customer name and ID
+            }));
+            setCustomerOptions(options);
+        } catch (error) {
+            console.error('Error fetching customer options:', error);
         }
     };
 
@@ -38,6 +53,10 @@ const Payment = () => {
       const { name, value } = e.target;
       setFormData({ ...formData, [name]: value });
     };
+    const handleCustomerChange = (selectedOption) => {
+        setFormData({ ...formData, customer_id: selectedOption.value });
+    };
+    
 
     const validateForm = () => {
       if (!formData.amount || !formData.payment_date || !formData.status) {
@@ -154,14 +173,12 @@ const Payment = () => {
                                     <option value="paid">Paid</option>
                                 </select>
                             </label>
-
                             <label className="payment-form-label">
                                 Customer ID:
-                                <input
-                                    type="number"
-                                    name="customer_id"
-                                    value={formData.customer_id}
-                                    onChange={handleChange}
+                                <Select
+                                    value={customerOptions.find(option => option.value === formData.customer_id)}
+                                    onChange={handleCustomerChange}
+                                    options={customerOptions}
                                     className="payment-form-input"
                                 />
                             </label>

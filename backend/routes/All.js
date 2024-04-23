@@ -187,14 +187,13 @@ router.put('/stock/:itemId', async (req, res) => {
 
 
 
-// Find the top most sold items and their names 
 router.get('/top-sold-items', async (req, res) => {
     try {
-        const year = req.query.year|| new Date().getFullYear(); // Get the year from the query parameter
+        const year = req.query.year || new Date().getFullYear(); // Get the year from the query parameter
         const topSoldItems = await Sales.findAll({
             attributes: [
                 'item_id',
-                [sequelize.fn('count', sequelize.col('item_id')), 'total_sales']
+                [sequelize.fn('sum', sequelize.col('quantity_sold')), 'total_quantity_sold']
             ],
             group: ['item_id'],
             where: {
@@ -202,25 +201,24 @@ router.get('/top-sold-items', async (req, res) => {
                     [Op.between]: [`${year}-01-01`, `${year}-12-31`] // Filter sales for the given year
                 }
             },
-            order: [[sequelize.literal('total_sales'), 'DESC']],
+            order: [[sequelize.literal('total_quantity_sold'), 'DESC']],
             limit: 10, // Change the limit as per requirement
             raw: true // Get raw data from SQL query
         });
-
-        // Fetch item details for top sold items
-        const topSoldItemsWithData = await Promise.all(topSoldItems.map(async (item) => {
+        // Fetch item details for most sold items
+        const mostSoldItemsWithData = await Promise.all(topSoldItems.map(async (item) => {
             const stockData = await Stock.findOne({ where: { item_id: item.item_id } });
             return {
                 item_id: item.item_id,
                 item_name: stockData.item_name,
-                total_sales: item.total_sales
+                total_quantity_sold: item.total_quantity_sold
             };
         }));
-        console.log("kkk",topSoldItemsWithData)
-        res.json(topSoldItemsWithData);
+        console.log("topsolditems",mostSoldItemsWithData)
+        res.send(mostSoldItemsWithData);
     } catch (error) {
         console.error('Error fetching top sold items:', error);
-        res.status(500).json({ error: 'Internal server error' });
+        res.status(500).send({ message: 'Internal server error' });
     }
 });
 
@@ -231,7 +229,7 @@ router.get('/least-sold-items', async (req, res) => {
         const leastSoldItems = await Sales.findAll({
             attributes: [
                 'item_id',
-                [sequelize.fn('count', sequelize.col('item_id')), 'total_sales']
+                [sequelize.fn('sum', sequelize.col('quantity_sold')), 'total_quantity_sold']
             ],
             group: ['item_id'],
             where: {
@@ -239,8 +237,8 @@ router.get('/least-sold-items', async (req, res) => {
                     [Op.between]: [`${year}-01-01`, `${year}-12-31`] // Filter sales for the given year
                 }
             },
-            order: [[sequelize.literal('total_sales'), 'ASC']], // Sort by total sales in ascending order
-            limit: 3, // Change the limit as per requirement
+            order: [[sequelize.literal('total_quantity_sold'), 'ASC']], // Sort by total sales in ascending order
+            limit: 10, // Change the limit as per requirement
             raw: true // Get raw data from SQL query
         });
 
@@ -250,7 +248,7 @@ router.get('/least-sold-items', async (req, res) => {
             return {
                 item_id: item.item_id,
                 item_name: stockData.item_name,
-                total_sales: item.total_sales
+                total_quantity_sold: item.total_quantity_sold
             };
         }));
         console.log("leastsolditems",leastSoldItemsWithData)
