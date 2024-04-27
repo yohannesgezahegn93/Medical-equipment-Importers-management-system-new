@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import './Stock.css';
 import { IoSearchSharp } from "react-icons/io5";
 import Select from 'react-select';
+import Home1 from "../Home1";
 
 const Stock = () => {
     const [stockList, setStockList] = useState([]);
@@ -158,7 +159,7 @@ return (
         <div className="stock-container">
           <div className="stock-home-and-sort-title">
         
-            <h2 className="stock-heading">Stock Management</h2>
+            <h2 className="stock-heading"><Home1/>Stock Management</h2>
           </div>
           <div className="stock-search-and-export">
             <div className="search-container">

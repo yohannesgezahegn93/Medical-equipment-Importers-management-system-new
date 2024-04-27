@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import './Customers.css';
 import { IoSearchSharp } from "react-icons/io5";
+import Home1 from "../Home1";
 
 const Customer = () => {
     const [customerList, setCustomerList] = useState([]);
@@ -82,7 +83,7 @@ const Customer = () => {
     return (
         <div className="customer-container">
             <div className="customer-home-and-sort-title">
-                <h2 className="customer-heading">Customer Management</h2>
+                <h2 className="customer-heading"><Home1/>Customer Management</h2>
             </div>
             <div className="customer-search-and-export">
                 <div className="search-container">

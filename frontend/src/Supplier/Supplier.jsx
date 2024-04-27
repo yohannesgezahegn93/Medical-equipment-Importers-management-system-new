@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import './Suplier.css';
 import { IoSearchSharp } from "react-icons/io5";
+import Home1 from "../Home1";
 
 const Supplier = () => {
     const [supplierList, setSupplierList] = useState([]);
@@ -76,7 +77,7 @@ const Supplier = () => {
     return (
         <div className="supplier-container">
             <div className="supplier-home-and-sort-title">
-                <h2 className="supplier-heading">Supplier Management</h2>
+                <h2 className="supplier-heading"><Home1/>Supplier Management</h2>
             </div>
             <div className="supplier-search-and-export">
                 <div className="search-container">

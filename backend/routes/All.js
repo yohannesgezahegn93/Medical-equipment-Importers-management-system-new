@@ -185,8 +185,6 @@ router.put('/stock/:itemId', async (req, res) => {
     }
 });
 
-
-
 router.get('/top-sold-items', async (req, res) => {
     try {
         const year = req.query.year || new Date().getFullYear(); // Get the year from the query parameter

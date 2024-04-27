@@ -1,0 +1,78 @@
+ 
+.main-manu-head{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    width: fit-content;
+    height:100vh;
+    z-index: 100;
+    left:0;
+    bottom: 0;
+    top: 0;
+    left: -300px; /* Start off screen */
+    transition: left 0.3s ease; 
+    padding-right: 20px;
+    padding-left: 15px;
+    height: 100%;
+}
+.home-nav-barr{
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    background: none;
+    line-height: 10px;
+    margin-top: 20px;
+}
+.main-lists{
+    display: flex;
+    align-items: center;
+    line-height: 38px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-size: medium;
+    width: 200px;
+    font-family:-apple-system;
+    color: rgb(216, 213, 213);
+    padding-left: 10px;
+}
+.main-lists:hover{
+    color: rgb(255, 255, 255);
+    transition: all 0.3s;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+.iconss{
+    margin-right: 20px;  
+}
+.close-button{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    border-radius: 50%;
+    right: 0;
+    margin-right: 10px ;
+    margin-top: 10px;
+    color: white;
+    cursor:pointer; 
+    font-weight: bold;
+}
+.link{
+    text-decoration: none;
+    color: white;
+}
+.hum-button-head{
+    background: none;
+    display: flex;
+    color: white;
+    font-size: x-small;
+    margin-right: 20px;
+    font-family: -apple-system;
+}
+  .open {
+    left: 0; 
+  }
+  
+  

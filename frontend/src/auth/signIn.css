@@ -1,0 +1,117 @@
+body{
+  background-color: rgb(233, 233, 233);
+}
+.container{
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom:0;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(20, 38, 170, 0.3), rgba(6, 40, 102, 0.9));
+
+  }
+  .input-login{
+    width: 100%;
+    width: 100%;
+    border: none;
+    height: 30px;
+    background-color: rgba(248, 58, 58, 0);
+    color: rgb(0, 0, 0);
+    margin-left: 10px;
+    outline:none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+  }
+  .input:focus{
+    outline: none;
+  }
+  .login-description{
+    color:  rgb(44, 147, 182);
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+  }
+  .Label{
+    margin-bottom: 5px;
+    margin-top: 30px;
+    display: block;
+    color:  rgb(8, 63, 82);
+    font-weight: 500;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+  }
+  .sign-in-button{
+    color: rgb(8, 63, 82);
+    background-color: rgb(8, 63, 82);
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 5px;
+    color: white;
+  }
+  .login-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: rgb(8, 63, 82);
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+  }
+  .sign-in-container{
+    display: flex;
+    flex-direction: column;
+   width: 100%;
+   align-items: center;
+  }
+  .password-and-eye{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    
+  }
+  .net-eye{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    background-color: rgb(151, 181, 201);
+    width: 25px;
+
+  }
+  .mainer{
+    padding: 30px;
+    padding-right: 50px;
+    padding-left: 50px;
+    border-radius: 20px;
+    width: 400px;
+    height: 500px;
+    background-image: linear-gradient(rgba(181, 186, 233, 0.99), rgba(128, 153, 236, 0.7)), url('/b2.PNG');
+  }
+  .account-icon{
+    width: 100px;
+    height: 100px;
+    color: rgb(8, 63, 82);
+  }
+  .login-icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon-and-input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    vertical-align: middle;
+    margin-bottom: 35px;
+    margin-top: 10px;
+    width: 300px;
+    border-bottom: 1px solid rgb(8, 63, 82) ;
+  }
+  .side-icons{
+    font-size: 15px;
+  }
+  .side-icons-mail{
+    font-size:19px;
+  }
+ 

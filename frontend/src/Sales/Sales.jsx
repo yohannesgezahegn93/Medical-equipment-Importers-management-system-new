@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import './Sales.css';
 import { IoSearchSharp } from "react-icons/io5";
 import Select from 'react-select';
+import Home1 from "../Home1";
 
 const Sales = () => {
     const [salesList, setSalesList] = useState([]);
@@ -142,7 +143,7 @@ const Sales = () => {
     return (
         <div className="sales-container">
             <div className="sales-home-and-sort-title">
-                <h2 className="sales-heading">Sales Management</h2>
+                <h2 className="sales-heading"><Home1/>Sales Management</h2>
             </div>
             <div className="sales-search-and-export">
                 <div className="search-container">

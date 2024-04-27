@@ -1,0 +1,18 @@
+.Log-out-button{
+   background-color: rgb(224, 224, 224);
+   border-radius: 5px;
+   width: 100%;
+   color: rgb(5, 5, 5);
+   margin-top: 20px;
+   font-family: -apple-system;
+   font-size: medium;
+   font-weight: bold;
+}
+.Log-out-button:hover{
+   transition: background-color 0.3s;
+   background-color: rgb(199, 197, 197);
+   color: rgb(139, 5, 5);
+}
+.logout-icon{
+   margin-right: 20px;
+}

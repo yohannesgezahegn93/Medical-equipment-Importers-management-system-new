@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import './Payment.css';
 import { IoSearchSharp } from "react-icons/io5";
 import Select from 'react-select';
+import Home1 from "../Home1";
 
 const Payment = () => {
     const [paymentList, setPaymentList] = useState([]);
@@ -93,7 +94,7 @@ const Payment = () => {
     return (
         <div className="payment-container">
             <div className="payment-home-and-sort-title">
-                <h2 className="payment-heading">Payment Management</h2>
+                <h2 className="payment-heading"><Home1/>Payment Management</h2>
             </div>
             <div className="payment-search-and-export">
                 <div className="search-container">
