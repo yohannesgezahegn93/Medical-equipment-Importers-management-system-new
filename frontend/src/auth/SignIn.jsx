@@ -125,6 +125,8 @@ const SignIn = () => {
           </div>
           </div>
             <button className="sign-in-button" onClick={handleLogin}>Log In</button>
+            <Link className="sign-in-button" to='/SignUp'>sign up</Link>
+
             
         </div>
       </div>
