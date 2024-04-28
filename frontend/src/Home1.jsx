@@ -25,6 +25,10 @@ import { Link } from "react-router-dom";
 import { MdPeople } from "react-icons/md";
 import { FaCcAmazonPay } from "react-icons/fa";
 import { FaShopify } from "react-icons/fa";
+import { MdDashboard } from "react-icons/md";
+import { RxDashboard } from "react-icons/rx";
+
+
 
 
 
@@ -46,7 +50,7 @@ const Home1 = () => {
           </div>
         </div>
         <nav className='home-nav-bar'>
-        <Link className='link' to='/Home'><div className='main-lists'><FaShoppingCart className='icons'/><div>Dashboard</div></div></Link> 
+        <Link className='link' to='/Home'><div className='main-lists'><MdDashboard className='icons'/><div>Dashboard</div></div></Link> 
           <Link className='link' to='/stock'><div className='main-lists'><FaShoppingCart className='icons'/><div>Stock</div></div></Link> 
           <Link className='link' to='/customers'><div className='main-lists'><MdPeople className='icons'/><div>Customers</div></div></Link> 
           <Link className='link' to='/suppliers'><div className='main-lists'><MdAssignment className='icons'/><div>Suppliers</div></div></Link> 

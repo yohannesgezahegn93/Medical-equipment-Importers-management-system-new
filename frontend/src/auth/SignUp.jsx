@@ -82,8 +82,18 @@ const SignUp = () => {
             'Content-Type': 'multipart/form-data', // Set content type to multipart form data
             },
           });
-          alert('Registration Completed');
           
+          alert('Registration Completed');
+          // Reset form fields
+          setName("");
+          setLastName("");
+          setUserName("");
+          setPhoneNumber("");
+          setEmail("");
+          setPassword("");
+          setConfirmPassword("");
+          setOccupation("");
+          setProfilePicture(null);
           
         }else{
           alert('please fill all fields')
