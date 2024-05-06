@@ -136,7 +136,7 @@ const Customer = () => {
                         <div className='customer-form-title' >Add Customer</div>
                         <div className="customer-form">
                             <label className="customer-form-label">
-                                Customer Name:
+                                Customer Name
                                 <input
                                     type="text"
                                     name="customer_name"
@@ -151,7 +151,7 @@ const Customer = () => {
                                     name="customer_type"
                                     value={formData.customer_type}
                                     onChange={handleChange}
-                                    className="customer-form-input"
+                                    className="customer-form-inputt"
                                 >
                                     <option value="">Select a customer type</option>
                                     <option value="Wholesaler">Wholesaler</option>

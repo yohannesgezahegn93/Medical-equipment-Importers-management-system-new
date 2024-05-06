@@ -1,122 +1,80 @@
-.main-analysis{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    border-radius: 5px;
-    column-gap: 7px;
-  }
-  h4{
-    font-size: medium;
-    text-wrap: nowrap;
-    font-family: -apple-system;
-  }
-  .individual-data:hover{
-    background-color: rgba(226, 224, 224, 0.3);
-    cursor: pointer;
-  }
-  .analytical-icons1,
-  .analytical-icons2,
-  .analytical-icons3,
-  .analytical-icons4,
-  .analytical-icons5,
-  .analytical-icons6{
+.main{
     display: flex;
     flex-direction: column;
+    width: 100%;
+  }
+  .AA{
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    font-size: medium;
-    font-family: -apple-system;
+    background-color: rgb(159, 89, 165);
+    column-gap: 20px;
+    margin-bottom: 20px;
+    padding-right: 100px;
+  }
+  .stocks-to-buy-table{
+    background-color: rgba(190, 81, 194, 0.219);
+  }
+  .input-date{
+    width: 200px;
+    height: 30px;
+    border: none;
+    outline: none;
     border-radius: 5px;
-    font-weight:200;
-    height: 70px;
-    color: rgb(255, 255, 255);
-    padding: 0px 5px 5px;
   }
-  
-  .analytical-icons1:hover,
-  .analytical-icons2:hover,
-  .analytical-icons3:hover,
-  .analytical-icons4:hover,
-  .analytical-icons5:hover,
-  .analytical-icons6:hover{
-     cursor: pointer;
-  }
-  .analytical-icons1{
-    background-color: rgb(122, 63, 170);
-  }
-  .analytical-icons2{
-    background-color: rgb(68, 100, 189);
-  }
-  .analytical-icons3{
-    background-color: rgb(201, 58, 58);
-  }
-  .analytical-icons4{
-    background-color: rgb(212, 60, 162);
-  }
-  .analytical-icons5{
-    background-color: rgb(32, 182, 95);
-  }
-  .analytical-icons6{
-    background-color: rgb(206, 51, 90);
-  }
-  
-  @media (min-width: 500px) {
-      .main-analysis {
-          display: grid;
-        grid-template-columns: 1fr 1fr ;
-      }
-    }
-  @media (min-width: 660px) {
-      .main-analysis {
-          display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-    }
-  @media (min-width: 920px) {
-      .main-analysis {
-          display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-      }
-    }
-  @media (min-width: 1157px) {
-      .main-analysis {
-          display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      }
-    }
-  @media (min-width: 1400px) {
-      .main-analysis {
-          display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      }
-    }
-  @media (min-width: 1336px) {
-      .main-analysis {
-          display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-      }
-    }
-   .real-number-data{
-    font-size: large;
+  .DD{
     color: white;
-    font-family:'Franklin Gothic Medium';
-   }
-   .di1{
-    font-size: x-large;
-   }
-   .dollar{
+  }
+  .EE{
+    margin-right: 10px;
+  }
+  .BB{
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    column-gap: 20px;
+    margin: 10px;
+  }
+  .CC{
     display: flex;
     align-items: center;
-    font-size: large;
-   }
-   .icon-and-title{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 10px;
-    padding: 5px;
-    width: 100%;
-    margin-top: 5px;
-   }
-   
+    justify-content: space-between;
+    column-gap: 40px;
+    font-size: medium;
+    margin-left: 20px;
+    color: white;
+  }
+  .analytical-icons{
+    width: 400px;
+    height: 100%;
+  }
+  .FF{
+    background-color: rgb(218, 203, 203);
+  }
+  .GG{
+    background-color: rgba(190, 81, 194, 0.219);
+  }
+  .HH{
+    background-color: rgba(190, 81, 194, 0.219);
+  }
+  .II{
+    background-color: rgb(182, 67, 67);
+    border: none;
+    outline:none;
+    width: 100px;
+    border-radius: 5px;
+    margin-left: 10px;
+    height: 25px;
+    color: white;
+  }
+  .profit-inputs{
+    background-color: rgb(136, 41, 41);
+  }
+  .top-sold-items-table{
+    width: 400px;
+  }
+  .least-sold-items-table{
+    background-color: rgba(190, 81, 194, 0.219);
+    width: 400px;
+  }
