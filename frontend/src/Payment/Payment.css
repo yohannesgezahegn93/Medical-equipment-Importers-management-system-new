@@ -2,12 +2,22 @@
     display: flex;
     align-items: center;
     padding-left: 30px;
-    background-color: rgb(2, 26, 70);
-    color: white;
+    color: rgb(49, 48, 48);
     height: 70px;
     font-size: small;
     font-family: -apple-system;
   }
+  .payment-heading{
+    display: flex;
+    align-items: center;
+  }
+  .payment-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+ 
   .export-btn-pdf-admin,
   .export-btn-csv-admin{
     background-color: rgba(2, 26, 70, 0.897);
@@ -42,11 +52,26 @@
     width: 100%;
     border-radius: none;
   }
+  .payment-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  .payment-form-title{
+    color: #086637;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .payment-form-label{
+    display: flex;
+    flex-direction: column;
+  }
   .payment-thead{
     font-size: medium;
     font-family: -apple-system;
     padding: 5px;
-    background-color: rgb(2, 26, 70);
+    color: white;
+    background-color: rgb(99, 39, 177);
   }
   .payment-export-buttons{
       margin-bottom: 10px;
@@ -282,9 +307,10 @@
     border: none;
   }
   .payment-form-submit-btn{
-    background-color: #0a7031;
-    border-radius: 3px;
+    background-color: #066440;
+    border-radius: 5px;
     margin-left: 23px;
+    color:white;
     margin-bottom: 20px;
   }
   .contarct-form-detail-close-button2{
@@ -292,4 +318,14 @@
     border-radius: 3px;
     margin-left: 10px;
     margin-bottom: 20px;
+  }
+  .payment-form-close-button{
+    background-color: #f44336;
+    color: white;
+    margin-left: 20px;
+  }
+  .add-payment-button{
+    background-color: #066440;
+    color: white;
+    margin-top: 20px;
   }

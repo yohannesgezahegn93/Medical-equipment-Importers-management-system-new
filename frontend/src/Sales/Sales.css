@@ -2,11 +2,39 @@
     display: flex;
     align-items: center;
     padding-left: 30px;
-    background-color: rgb(2, 26, 70);
-    color: white;
+    color: rgb(49, 48, 48);
     height: 70px;
     font-size: small;
     font-family: -apple-system;
+  }
+
+  .sales-search-input{
+    background-color: white;
+  }
+  .sales-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+  .sales-form-label{
+    display: flex;
+    flex-direction: column;
+  }
+  .sales-form-title{
+     color: #078666;
+     font-weight: bold;
+  }
+  .sales-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+  .sales-heading{
+    display: flex;
+    align-items: center;
   }
   .export-btn-pdf-admin,
   .export-btn-csv-admin{
@@ -46,7 +74,8 @@
     font-size: medium;
     font-family: -apple-system;
     padding: 5px;
-    background-color: rgb(2, 26, 70);
+    background-color: rgb(138, 19, 185);
+    color: white;
   }
   .sales-export-buttons{
       margin-bottom: 10px;
@@ -71,13 +100,17 @@
     border-radius: 5px;
     margin-left: 22px;
   }
+  .search-icon{
+    background-color: white;
+    height: 27px;
+  }
   .sales-search-input{
     border: none;
     outline: none;
     height: 25px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    background-color: #e5e6e7;
+    background-color: #ffffff;
     padding-left: 5px;
   }
   .medical-sales-form-title{
@@ -169,7 +202,7 @@
   }
   
   .detail-close-button-sales-detail {
-    background-color: #f44336;
+   
     color: white;
     border: none;
     border-radius: 5px;
@@ -257,7 +290,7 @@
   }
   .sales-form-submit-btn,
   .maintenance-cancel-button{
-    background-color: green;
+    background-color: rgb(7, 119, 76);
     margin-left: 5px;
   
   } 
@@ -271,25 +304,38 @@
     border-radius: 5px;
     font-weight: bold;
   }
+
   .sales-form-input {
     color: rgb(0, 0, 0);
     padding-left: 5px;
     border: none;
-    height: 40px;
     outline: none;
-    background-color: rgb(241, 241, 241);
+    height: 25px;
+    outline: none;
     border-radius: 3px;
     border: none;
   }
   .sales-form-submit-btn{
-    background-color: #0a7031;
+    background-color: #078666;
     border-radius: 3px;
+    width: 100px;
     margin-left: 23px;
     margin-bottom: 20px;
+    color: white;
+    margin-right: 20px;
   }
-  .contarct-form-detail-close-button2{
+  .sales-form-close-button{
     background-color: red;
     border-radius: 3px;
     margin-left: 10px;
     margin-bottom: 20px;
+    width: 100px;
+    color: white;
+    border: none;
+    outline: none;
+  }
+  .add-sales-button{
+    background-color: #078666;
+    color: white;
+    margin-top: 20px;
   }

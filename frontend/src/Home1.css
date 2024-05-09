@@ -36,6 +36,7 @@
     font-family:-apple-system;
     color: rgb(216, 213, 213);
     padding-left: 10px;
+    gap: 10px;
 }
 .main-lists:hover{
     color: rgb(255, 255, 255);
@@ -66,8 +67,8 @@
 .hum-button-head{
     background: none;
     display: flex;
-    color: white;
-    font-size: x-small;
+    color: rgb(109, 108, 108);
+    font-size: small;
     margin-right: 20px;
     font-family: -apple-system;
 }

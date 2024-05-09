@@ -16,20 +16,17 @@ import Home1 from "../Home1";
 
 
 
-const Home = () => {
+const Homee = () => {
   return (
-    <div className="main-class-request-options">
-      <div className="right-part">
-        <div className="the-navigation-main-class-requestss">
-         
-          <h2 className="the-request-title"><Home1/>Dashboard</h2>
-          
+    <div className="A">
+      <div className="B">
+        <div className="C"> 
+          <h2 className="D"><Home1/>Dashboard</h2>
         </div>
-        
         <AnalyticalData/>
       </div>
     </div>
   );
 }
 
-export default Home;
+export default Homee;

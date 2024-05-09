@@ -1,12 +1,33 @@
 .stock-home-and-sort-title{
     display: flex;
+    flex-direction: row;
     align-items: center;
     padding-left: 30px;
-    background-color: rgb(2, 26, 70);
-    color: white;
-    height: 70px;
+    color: rgb(68, 67, 67);
     font-size: small;
     font-family: -apple-system;
+  }
+  .stock-form-textarea{
+     height: 25px;
+     border: none;
+     outline: none;
+     background-color: #e6e9e6;
+  }
+  .stock-heading{
+    display: flex;
+    align-items: center;
+  }
+  .stock-form-label{
+    display: flex;
+    flex-direction: column;
+  }
+  .stock-container{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    flex-direction: column;
   }
   .export-btn-pdf-admin,
   .export-btn-csv-admin{
@@ -24,7 +45,7 @@
   
   }
   .search-icon{
-    background-color: #dfdfdf;
+    background-color: #ffffff;
     height: 25px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -37,8 +58,12 @@
     margin: 10px;
     padding: 10px;
   }
+  .stock-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
   .main-stock-table{
-    background-color: rgb(255, 255, 255);
     width: 100%;
     border-radius: none;
   }
@@ -46,7 +71,8 @@
     font-size: medium;
     font-family: -apple-system;
     padding: 5px;
-    background-color: rgb(2, 26, 70);
+    background-color: rgb(136, 61, 180);
+    color: white;
   }
   .stock-export-buttons{
       margin-bottom: 10px;
@@ -55,7 +81,9 @@
     font-size: medium;
     font-family: -apple-system;
     padding-left: 5px;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(219, 216, 216);
+    border-right: solid 1px rgb(206, 204, 204);
+    border-bottom: solid 1px rgb(204, 202, 202);
   }
   .stock-detail-button{
     background-color: #086637;
@@ -66,18 +94,20 @@
     width: 100%;
   }
   .add-stock-button{
-    background-color: rgb(6, 77, 43);
+    background-color: rgb(9, 116, 64);
     border: none;
     border-radius: 5px;
     margin-left: 22px;
+    color: white;
+    width: 200px;
   }
   .stock-search-input{
     border: none;
     outline: none;
-    height: 25px;
+    height: 23px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    background-color: #e5e6e7;
+    background-color: #ffffff;
     padding-left: 5px;
   }
   .medical-stock-form-title{
@@ -180,7 +210,7 @@
     font-family: -apple-system;
   }
   .columnName-stock-detail {
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(255, 255, 255);
     padding: 5px;
     padding-bottom: 3px;
     border-radius: 5px;
@@ -209,7 +239,7 @@
     padding: 10px;
   }
   .detail-description-detailed-stock-form {
-    background-color: rgb(220, 223, 226);
+    background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     padding: 20px;
     width: 90%;
@@ -256,11 +286,17 @@
     margin-top: 10px;
   }
   .stock-form-submit-btn,
-  .maintenance-cancel-button{
-    background-color: green;
-    margin-left: 5px;
+  .maintenance-close-button{
+    background-color: rgb(0, 128, 85);
+    margin-right: 15px;
+    width: 200px;
+    color: white;
   
   } 
+  .stock-form-close-button{
+    background-color: #f44336;
+    color: white;
+  }
   .stocklabel {
     display: flex;
     align-items: center;
@@ -276,7 +312,7 @@
     color: rgb(0, 0, 0);
     padding-left: 5px;
     border: none;
-    height: 40px;
+    height: 25px;
     outline: none;
     background-color: rgb(241, 241, 241);
     border-radius: 3px;

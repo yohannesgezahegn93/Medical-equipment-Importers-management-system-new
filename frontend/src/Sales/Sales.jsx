@@ -209,7 +209,7 @@ const Sales = () => {
                                     value={stockOptions.find(option => option.value === formData.item_id)}
                                     onChange={handleItemChange}
                                     options={stockOptions}
-                                    className="sales-form-input"
+                                    className="t"
                                 />
                             </label>
                             <label className="sales-form-label">
@@ -218,7 +218,7 @@ const Sales = () => {
                                     value={customerOptions.find(option => option.value === formData.customer_id)}
                                     onChange={handleCustomerChange}
                                     options={customerOptions}
-                                    className="sales-form-input"
+                                    className="t"
                                 />
                             </label>
                             <label className="sales-form-label">

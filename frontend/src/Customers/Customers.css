@@ -2,11 +2,57 @@
     display: flex;
     align-items: center;
     padding-left: 30px;
-    background-color: rgb(2, 26, 70);
     color: white;
     height: 70px;
     font-size: small;
     font-family: -apple-system;
+  }
+  .customer-form-submit-btn{
+    background-color: #327c57;
+    color: white;
+    margin: 20px;
+  }
+  .customer-form-close-button{
+    background-color: #ca2418;
+    color: white;
+  }
+  .customer-form-input{
+    height: 25px;
+    border: none;
+    outline: none;
+  }
+  .customer-form-label{
+    display: flex;
+    flex-direction: column;
+  }
+  .customer-form-inputt{
+    height:27px;
+    border: none;
+    outline:none;
+  }
+  .buyer-form-label{
+    display: flex;
+    flex-direction: column;
+  }
+  .customer-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+  .add-customer-button{
+    color: white;
+    margin-top: 20px;
+  }
+  .customer-form-title{
+    color: rgb(16, 151, 192);
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .customer-heading{
+    display: flex;
+    color: black;
+    align-items: center;
   }
   .export-btn-pdf-admin,
   .export-btn-csv-admin{
@@ -42,11 +88,17 @@
     width: 100%;
     border-radius: none;
   }
+  .customer-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
   .customer-thead{
     font-size: medium;
     font-family: -apple-system;
     padding: 5px;
-    background-color: rgb(2, 26, 70);
+    background-color: rgb(147, 51, 192);
+    color:#ffffff
   }
   .customer-export-buttons{
       margin-bottom: 10px;
@@ -255,12 +307,7 @@
     width: 100px;
     margin-top: 10px;
   }
-  .customer-form-submit-btn,
-  .maintenance-cancel-button{
-    background-color: green;
-    margin-left: 5px;
   
-  } 
   .customerlabel {
     display: flex;
     align-items: center;
@@ -270,22 +317,6 @@
     height: 100%;
     border-radius: 5px;
     font-weight: bold;
-  }
-  .customer-form-input {
-    color: rgb(0, 0, 0);
-    padding-left: 5px;
-    border: none;
-    height: 40px;
-    outline: none;
-    background-color: rgb(241, 241, 241);
-    border-radius: 3px;
-    border: none;
-  }
-  .customer-form-submit-btn{
-    background-color: #0a7031;
-    border-radius: 3px;
-    margin-left: 23px;
-    margin-bottom: 20px;
   }
   .contarct-form-detail-close-button2{
     background-color: red;

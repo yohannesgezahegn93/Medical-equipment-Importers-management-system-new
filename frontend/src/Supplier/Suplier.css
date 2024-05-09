@@ -2,11 +2,44 @@
     display: flex;
     align-items: center;
     padding-left: 30px;
-    background-color: rgb(2, 26, 70);
-    color: white;
+    color: rgb(61, 60, 60);
     height: 70px;
     font-size: small;
     font-family: -apple-system;
+  }
+  .supplier-form-label{
+    display: flex;
+    flex-direction: column;
+    column-gap: 40px;
+  }
+  .supplier-form-input{
+    border: none;
+    height: 25px;
+    outline: none;
+  }
+  .supplier-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+  .add-supplier-button{
+    background-color: #086637;
+    margin-top: 20px;
+    color: white;
+  }
+  .supplier-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+  .search-icon{
+    
+  }
+  .supplier-heading{
+    display: flex;
+    align-items: center;
   }
   .export-btn-pdf-admin,
   .export-btn-csv-admin{
@@ -24,7 +57,7 @@
   
   }
   .search-icon{
-    background-color: #dfdfdf;
+    background-color: #ffffff;
     height: 25px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -46,7 +79,8 @@
     font-size: medium;
     font-family: -apple-system;
     padding: 5px;
-    background-color: rgb(2, 26, 70);
+    background-color: rgb(96, 17, 148);
+    color: white;
   }
   .supplier-export-buttons{
       margin-bottom: 10px;
@@ -65,19 +99,14 @@
   .suppliert-table{
     width: 100%;
   }
-  .add-supplier-button{
-    background-color: rgb(6, 77, 43);
-    border: none;
-    border-radius: 5px;
-    margin-left: 22px;
-  }
+
   .supplier-search-input{
     border: none;
     outline: none;
     height: 25px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    background-color: #e5e6e7;
+    background-color: #ffffff;
     padding-left: 5px;
   }
   .medical-supplier-form-title{
@@ -257,8 +286,9 @@
   }
   .supplier-form-submit-btn,
   .maintenance-cancel-button{
-    background-color: green;
+    background-color: rgb(3, 94, 48);
     margin-left: 5px;
+    color: white;
   
   } 
   .supplierlabel {
@@ -271,19 +301,11 @@
     border-radius: 5px;
     font-weight: bold;
   }
-  .supplier-form-input {
-    color: rgb(0, 0, 0);
-    padding-left: 5px;
-    border: none;
-    height: 40px;
-    outline: none;
-    background-color: rgb(241, 241, 241);
-    border-radius: 3px;
-    border: none;
-  }
-  .supplier-form-submit-btn{
-    background-color: #0a7031;
-    border-radius: 3px;
+
+  .supplier-form-close-button{
+    background-color: #c51913;
+    border-radius: 5px;
+    color: white;
     margin-left: 23px;
     margin-bottom: 20px;
   }
