@@ -186,13 +186,7 @@ const SignUp = () => {
                 {showPassword ? <RxEyeOpen  onClick={handleTogglePasswordVisibility} /> : <TbEyeClosed onClick={handleTogglePasswordVisibility} />}
              </div>
         </div >
-            <label className="descriptions-for-password">
-                <p className="password-description-title">Password should contain:</p>
-                <p className="password-description">- at least one letter</p>
-                <p className="password-description">- at least one number</p>
-                <p className="password-description">- at least one special character</p>
-                <p className="password-description">- and have length of 8 characters</p>
-            </label>
+           
         </div>
         <div className="create-label-and-input">
             <label className="create-account-labels">Confirm Password*</label>
