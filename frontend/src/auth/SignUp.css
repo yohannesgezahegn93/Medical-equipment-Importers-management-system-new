@@ -5,7 +5,7 @@
     padding-left: 10px;
     border-radius: 5px;
     max-width: 400px;
-    background-color: #e4e4e6;
+    background-color: #cacace;
 }
 .create-account-title-icon{
     display: flex;
@@ -13,13 +13,16 @@
     align-items: center;
     padding-left: 30px;
     height: 70px;
-    color: white;
-    background-color: rgb(2, 26, 70);
+    color: rgb(7, 7, 7);
     font-size: small;
     font-family: -apple-system;
 }
 .createAccount-section{
     display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
     flex-direction: column; 
 }
 .occupation-input{
@@ -34,15 +37,19 @@
     color: #454546;
 }
 .account-title-section{
-  color: white;
+  color: rgb(29, 28, 28);
   border-radius: 5px;
 }
-.descriptions-for-password{
+.descriptions-for-passwordd{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
     margin-top: 10px;
+    width: 100%;
     border-radius: 10px;
-    background-color: rgb(4, 31, 107);
+    background-color: rgb(157, 57, 204);
     color: white;
-    padding: 5px;
 }
 .create-account-picture{
     margin-bottom: 20px;
@@ -70,14 +77,10 @@
 .sub-create-account{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    justify-content: baseline;
     column-gap: 100px;
     row-gap: 15px;
     padding: 20px;
-    padding-right: 50px;
-    padding-left: 50px;
-    margin-top: 20px;
-    color: #4f4f50;
+    color: #3c3c3d;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
@@ -89,16 +92,6 @@
 .create-account-labels{
    font-family: -apple-system;
    font-size: large;
-}
-.password-description{
-    padding-left:20px;
-    color: white;
-    font-family: -apple-system;
-    font-size: large;
-    
-}
-.password-description-title{
-    color: white;
 }
 .password-input-container{
     display: flex;
@@ -113,7 +106,8 @@
     outline: none;
     border: none;
     padding-left: 10px;
-    background-color: #e4e4e6;
+    border-radius: 5px;
+    background-color: #c2c2c5;
 }
 .eye{
     display: flex;
@@ -125,8 +119,9 @@
     background-color: #e4e4e6;
 }
 .create-account-buttonn{
-    background-color: rgba(4, 31, 107, 0.918);
+    background-color: #041f6bea;
     border-radius: 5px;
+    color: white;
     width: 150px;
 }
 .create-account-buttonn:hover{
